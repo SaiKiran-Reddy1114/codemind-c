@@ -12,3 +12,4 @@ int main()
         printf("%d",n/4 + 1);
     }
 }
+
