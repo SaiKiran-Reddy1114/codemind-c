@@ -6,27 +6,17 @@ int main()
     int i,j;
     for (i=0; i<a; i++)
     {
-        for (j=0; j<a-i-1; j++)
+        for (j=0; j<a-(i+1); j++)
         {
             printf(" ");
         }
-        for (j=0; j<a; j++)
+        for (j=i; j>0; j--)
         {
-            if (i==0 || i==a-1)
-            {
-                printf("*");
-            }
-            else
-            {
-                if (j==0 || j==a-1)
-                {
-                    printf("*");
-                }
-                else
-                {
-                    printf(" ");
-                }
-            }
+            printf("%d",j);
+        }
+        for (j=0; j<i+1; j++)
+        {
+            printf("%d",j);
         }
         printf("
 ");
