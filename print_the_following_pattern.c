@@ -1,15 +1,35 @@
 #include<stdio.h>
 int main()
 {
-	int i,j,n,c=0;
-	scanf("%d",&n);
-	for(i=(64+n);i>=65;i--)
-	{
-		for(j=i;j>=65;j--)
-		{
-			printf("%c ",i);
-		}
-		printf("
+    int a;
+    scanf("%d",&a);
+    int i,j;
+    for (i=0; i<a; i++)
+    {
+        for (j=0; j<a-i-1; j++)
+        {
+            printf(" ");
+        }
+        for (j=0; j<a; j++)
+        {
+            if (i==0 || i==a-1)
+            {
+                printf("*");
+            }
+            else
+            {
+                if (j==0 || j==a-1)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
+        }
+        printf("
 ");
-	}
+    }
+    return 0;
 }
